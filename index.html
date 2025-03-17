@@ -162,14 +162,21 @@
       box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
       background-color: #f8f8f8;
     }
+
+    /* 确保BibTeX部分不会有动画效果 */
+    #BibTeX {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
   </style>
 
   <script>
     // 添加滚动动画效果
     document.addEventListener('DOMContentLoaded', function() {
-      const sections = document.querySelectorAll('.section');
+      const sections = document.querySelectorAll('.section:not(#BibTeX)');
       
-      // 添加fade-in类到所有section
+      // 添加fade-in类到所有section，除了BibTeX部分
       sections.forEach(section => {
         if(!section.classList.contains('hero')) {
           section.classList.add('fade-in-section');
