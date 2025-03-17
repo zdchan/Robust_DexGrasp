@@ -43,6 +43,159 @@
   gtag('js', new Date());
   gtag('config', 'G-RJ93D4865V');
   </script>
+
+  <style>
+    /* 增加标题下划线效果 */
+    .title.is-3 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+    }
+    .title.is-3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      right: 25%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(0,0,0,0.2), transparent);
+      border-radius: 3px;
+    }
+    
+    /* 视频悬停放大效果 */
+    .content video {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .content video:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    /* 增强视频边框效果 */
+    .content video {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    /* 增大关键字的大小 */
+    .subtitle strong {
+      font-size: 1.1em;
+      color: #363636;
+    }
+    
+    /* 增大section重要描述的字体 */
+    h2.subtitle[style*="background-color"] {
+      font-size: 1.35rem;
+      line-height: 1.5;
+    }
+
+    /* 图片悬停效果 */
+    .content img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .content img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* 美化Paper和Code按钮 */
+    .publication-links .button {
+      transition: all 0.3s ease;
+      border: none;
+    }
+    .publication-links .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* 添加渐入动画类 */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 调整section标题居中显示 */
+    .title.is-3.has-text-centered {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      display: block;
+    }
+
+    /* 优化主标题 */
+    .publication-title {
+      background: linear-gradient(90deg, #2c3e50, #4a6572, #2c3e50);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0px 2px 3px rgba(0,0,0,0.1);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    /* 优化作者部分 */
+    .publication-authors a {
+      transition: color 0.3s ease;
+    }
+    .publication-authors a:hover {
+      color: #3273dc;
+      text-decoration: underline;
+    }
+
+    /* 优化摘要部分 */
+    .content.has-text-justified p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    
+    /* 添加引用样式 */
+    pre {
+      border-radius: 8px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+      background-color: #f8f8f8;
+    }
+  </style>
+
+  <script>
+    // 添加滚动动画效果
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section');
+      
+      // 添加fade-in类到所有section
+      sections.forEach(section => {
+        if(!section.classList.contains('hero')) {
+          section.classList.add('fade-in-section');
+        }
+      });
+      
+      // 检测滚动位置并添加可见类
+      function checkSections() {
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        sections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top;
+          
+          if(sectionTop < triggerBottom) {
+            section.classList.add('is-visible');
+          }
+        });
+      }
+      
+      // 初始检查
+      checkSections();
+      
+      // 滚动时检查
+      window.addEventListener('scroll', checkSections);
+    });
+  </script>
 </head>
 <body>
 
