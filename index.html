@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Robust Dexterous Grasping of General Objects from Single-view Perception.">
+  <meta name="keywords" content="SingleView DexGrasp">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robust Dexterous Grasping of General Objects from Single-view Perception</title>
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-72PW1FZDE4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-72PW1FZDE4');
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ93D4865V"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RJ93D4865V');
+  </script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Robust Dexterous Grasping of General Objects from Single-view Perception</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zdchan.github.io/">Hui Zhang</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://zijianwu1121.github.io/">Zijian Wu</a><sup>2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=boUC8sYAAAAJ&hl=en">Linyi Huang</a><sup>2</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://ait.ethz.ch/people/sammyc">Sammy Christen</a><sup>1</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/SONG-Jie/jsongroas">Jie Song</a><sup>2,3</span>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ETH Zürich, Switzerland</span>
+            <br>
+            <span class="author-block"><sup>2</sup>The Hong Kong University of Science and Technology (Guangzhou), China</span>
+<!--             <br> -->
+            <span class="author-block"><sup>3</sup>The Hong Kong University of Science and Technology, Hong Kong (China)</span>
+          </div>
+
+          <div class="is-size-5">
+              *Equal Contribution
+          </div>
+          
+<!--            <div class="is-size-5">
+              <span class="author-block">  <b>Accepted by ECCV 2024</b></span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+<!--               <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/z7axE9F7d6s"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+<!--              &lt;!&ndash; Medium Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://eth-ait.medium.com/animate-implicit-shapes-with-forward-skinning-c7ebbf355694"-->
+<!--                    class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-medium-m"></i>-->
+<!--                  </span>-->
+<!--                  <span>Medium</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              &lt;!&ndash; Blog Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://autonomousvision.github.io/snarf/"-->
+<!--                    class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-blogger-b"></i>-->
+<!--                  </span>-->
+<!--                  <span>Blog</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/zdchan/dexgrasp"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code/Data</span>
+                  </a>
+              </span>
+<!--            </div>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!--<section class="hero teaser">-->
+
+<!--    &lt;!&ndash;/ Paper video. &ndash;&gt;-->
+
+<!--</section>-->
+
+<section class="section_video">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video id="teaser" controls height="100%">
+            <source src="graspxl.mp4"
+                    type="video/mp4">
+<!--             <source src="https://drive.google.com/file/d/1HXg8o0jKrpw9bgqRx2dmX7TU1NboT5OM/view?usp=sharing"
+                    type="video/mp4"> -->
+          </video>
+        </div>
+        <h2 class="subtitle has-text-centered">
+            GraspXL is a method that can synthesize objective-driven grasping motions for 500k+ objects, which can be deployed on different robot hands and generated or reconstructed objects. 
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Human hands possess the dexterity to interact with diverse objects such as grasping specific parts of the objects and/or approaching them from desired directions. More importantly, humans can grasp objects of any shape without object-specific skills. Recent works synthesize grasping motions following single objectives such as a desired approach heading direction or a grasping area. Moreover, they usually rely on expensive 3D hand-object data during training and inference, which limits their capability to synthesize grasping motions for unseen objects at scale. In this paper, we unify the generation of hand-object grasping motions across multiple motion objectives, diverse object shapes and dexterous hand morphologies in a policy learning framework GraspXL. The objectives are composed of the graspable area, heading direction during approach, wrist rotation, and hand position. Without requiring any 3D hand-object interaction data, our policy trained with 58 objects can robustly synthesize diverse grasping motions for more than 500k unseen objects with a success rate of 82.2%. At the same time, the policy adheres to objectives, which enables the generation of diverse grasps per object. Moreover, we show that our framework can be deployed to different dexterous hands and work with reconstructed or generated objects. We quantitatively and qualitatively evaluate our method to show the efficacy of our approach. Our model and code are released.          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+<!--    &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Video</h2>-->
+<!--        <div class="publication-video">-->
+<!--          <iframe width="560" height="315" src="https://www.youtube.com/embed/Q99t36qGZUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;/ Paper video. &ndash;&gt;-->
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <h2 class="title is-3 has-text-centered">Generated Motions</h2>
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop height="50%">
+            <source src="shadow.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="50%">
+            <source src="allegro.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="50%">
+            <source src="knife1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="50%">
+            <source src="knife2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="50%">
+            <source src="earphone.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="50%">
+            <source src="battery1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <h3 class="title is-3 has-text-centered">Diverse Results</h3>
+    <div class="columns is-centered">
+    <div class="column is-full-width">
+      <div class="columns is-centered">
+        
+        <div class="column">
+          <div class="content">
+<!--             <h4 class="title is-4 has-text-centered">Different Object (Seen) <br> Same Text Prompt</h4> -->
+            <video id="unzip_video" autoplay controls muted loop playsinline height="100%">
+              <source src="large1.mp4"
+                      type="video/mp4">
+            </video>
+<!--             <p class="has-text-centered">
+              Generate grasping motions for 500k+ unseen objects.
+            </p> -->
+              </div>
+            </div>    
+        </div>
+      </div>
+
+      <div class="column">
+<!--         <h4 class="title is-4 has-text-centered">Different Object (Unseen) <br> Same Text Prompt</h4> -->
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="multimat-video" autoplay controls muted loop playsinline height="60%">
+              <source src="large2.mp4"
+                      type="video/mp4">
+            </video>
+<!--            <p class="has-text-centered">
+              Generate grasping motions for 500k+ unseen objects.
+            </p> -->
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <h2 class="subtitle has-text-centered">
+        Generate grasping motions for 500k+ unseen objects.
+      </h2>
+    
+        <div class="columns is-centered">
+        <div class="column is-full-width">
+        <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+<!--             <h4 class="title is-4 has-text-centered">Same Object Same Text Prompts</h4> -->
+            <video id="unzip_video" autoplay controls muted loop playsinline height="100%">
+              <source src="objective_new.mp4"
+                      type="video/mp4">
+            </video>
+<!--             <p class="has-text-centered">
+              Generate diverse motions for the same object according to diverse ojectives.
+            </p> -->
+              </div>
+            </div>    
+
+      <div class="column">
+<!--         <h4 class="title is-4 has-text-centered">Same Object Different Text Prompts</h4> -->
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="multimat-video" autoplay controls muted loop playsinline height="100%">
+              <source src="diverse.mp4"
+                      type="video/mp4">
+            </video>
+<!--             <p class="has-text-centered">
+              Generate diverse motions for the same object according to diverse ojectives.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="subtitle has-text-centered">
+      Generate diverse motions for the same object according to diverse ojectives.
+    </h2>
+
+<!--         <div class="column is-full-width">
+        <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="unzip_video" autoplay controls muted loop playsinline height="40%">
+              <source src="robot_hand.mp4"
+                      type="video/mp4">
+            </video>
+
+              </div>
+            </div>    
+    </div>
+
+    <h2 class="subtitle has-text-centered">
+      Generate grasping motions with the same objective for different hand models.
+    </h2>
+
+        <div class="column is-full-width">
+        <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="unzip_video" autoplay controls muted loop playsinline height="40%">
+              <source src="gen_recon.mp4"
+                      type="video/mp4">
+            </video>
+
+              </div>
+            </div>    
+    </div>
+
+    <h2 class="subtitle has-text-centered">
+      Synthesize grasping motions with objects generated from tests or reconstructed from in-the-wild videos using off-the-shelf methods.
+    </h2> -->
+
+            <div class="columns is-centered">
+        <div class="column is-full-width">
+        <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+<!--             <h4 class="title is-4 has-text-centered">Same Object Same Text Prompts</h4> -->
+            <video id="unzip_video" autoplay controls muted loop playsinline height="100%">
+              <source src="robot_hand.mp4"
+                      type="video/mp4">
+            </video>
+            <font size="4">  
+              <p class="has-text-centered">
+                  Generate grasping motions with the same objective for different hand models.
+              </p>
+            </font>
+              </div>
+            </div>    
+
+      <div class="column">
+<!--         <h4 class="title is-4 has-text-centered">Same Object Different Text Prompts</h4> -->
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="multimat-video" autoplay controls muted loop playsinline height="100%">
+              <source src="gen_recon.mp4"
+                      type="video/mp4">
+            </video>
+            
+            <font size="4">  
+              <p class="has-text-centered">
+                  Synthesize grasping motions with objects generated from tests or reconstructed from in-the-wild videos using off-the-shelf methods.
+              </p>
+            </font>
+          </div>
+        </div>
+      </div>
+    </div>
+          
+    </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inProceedings{zhang2024graspxl,
+  title={{GraspXL}: Generating Grasping Motions for Diverse Objects at Scale},
+  author={Zhang, Hui and Christen, Sammy and Fan, Zicong and Hilliges, Otmar and Song, Jie},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<!--<footer class="footer">-->
+<!--  <div class="container">-->
+<!--    <div class="content has-text-centered">-->
+<!--      <a class="icon-link"-->
+<!--         href="https://arxiv.org/pdf/2104.03953.pdf">-->
+<!--        <i class="fas fa-file-pdf"></i>-->
+<!--      </a>-->
+<!--      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>-->
+<!--        <i class="fab fa-github"></i>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-8">-->
+<!--        <div class="content">-->
+<!--          <p>-->
+<!--            This website is licensed under a <a rel="license"-->
+<!--                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative-->
+<!--            Commons Attribution-ShareAlike 4.0 International License</a>.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            This webpage is built with the template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
+
+</body>
+</html>
