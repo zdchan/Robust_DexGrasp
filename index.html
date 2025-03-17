@@ -95,44 +95,14 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-<!--               <span class="link-block">
-                <a href="https://youtu.be/z7axE9F7d6s"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-<!--              &lt;!&ndash; Medium Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://eth-ait.medium.com/animate-implicit-shapes-with-forward-skinning-c7ebbf355694"-->
-<!--                    class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-medium-m"></i>-->
-<!--                  </span>-->
-<!--                  <span>Medium</span>-->
-<!--                </a>-->
-<!--              </span>-->
-<!--              &lt;!&ndash; Blog Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://autonomousvision.github.io/snarf/"-->
-<!--                    class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-blogger-b"></i>-->
-<!--                  </span>-->
-<!--                  <span>Blog</span>-->
-<!--                </a>-->
-<!--              </span>-->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/zdchan/dexgrasp"
+                <a href="https://github.com/zdchan/RobustDexGrasp"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                   </a>
               </span>
             </div>
@@ -144,26 +114,17 @@
   </div>
 </section>
 
-<!--<section class="hero teaser">-->
-
-<!--    &lt;!&ndash;/ Paper video. &ndash;&gt;-->
-
-<!--</section>-->
-
 <section class="section_video">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-<!--         <h2 class="title is-3">Video</h2> -->
         <div class="publication-video">
           <video id="teaser" controls height="100%">
             <source src="graspxl.mp4"
                     type="video/mp4">
-<!--             <source src="https://drive.google.com/file/d/1HXg8o0jKrpw9bgqRx2dmX7TU1NboT5OM/view?usp=sharing"
-                    type="video/mp4"> -->
           </video>
         </div>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-centered" style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 1.5rem;">
             Relying on single-view perception, our method achieves robust grasping of 500+ unseen objects with various shapes, sizes, materials, masses, and random poses. 
         </h2>
       </div>
@@ -177,7 +138,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="background-color: #f5f5f5; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <p>
             Robust grasping of various objects from single-view perception is fundamental for dexterous robots. Previous works often rely on fully observable objects, expert demonstrations, or static grasping poses, which restrict their generalization ability and adaptability to external disturbances. In this paper, we present a reinforcement-learning-based framework that enables zero-shot dynamic dexterous grasping of a wide range of unseen objects from single-view perception, while performing adaptive motions to external disturbances. We utilize a hand-centric object representation for shape feature extraction that emphasizes interaction-relevant local shapes, enhancing robustness to shape variance and uncertainty. To enable effective hand adaptation to disturbances with limited observations, we propose a mixed curriculum learning strategy, which first utilizes imitation learning to distill a policy trained with privileged real-time visual-tactile feedback, and gradually transfers to reinforcement learning to learn adaptive motions under disturbances caused by observation noises and dynamic randomization. Our experiments demonstrate strong generalization in grasping unseen objects with random poses, achieving success rates of 87.6% across 247,786 simulated objects and 85.3% across 512 real objects. We also demonstrate the robustness of our method to various disturbances, including unobserved object movement and external forces, through both quantitative and qualitative evaluations.
           </p>
@@ -250,7 +211,7 @@
 <section class="section">
   <div class="container is-max-desktop">
   <h3 class="title is-3 has-text-centered">Generalization</h3>
-  <h2 class="subtitle has-text-centered">
+  <h2 class="subtitle has-text-centered" style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 2rem;">
     Trained with only 20 objects in simulation, our method demonstrates exceptional generalization capability across 500+ unseen real objects with various physical properties and random poses.
   </h2>
     <div class="columns is-centered">
@@ -260,11 +221,11 @@
           <source src="large1.mp4"
                   type="video/mp4">
         </video>
-        <font size="4">  
-          <p class="has-text-centered">
+        <div style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 1rem;">
+          <p class="has-text-centered" style="font-size: 1.1rem; margin: 0;">
             Robust grasping of diverse unseen objects with varying shapes, weights, and materials.
           </p>
-        </font>
+        </div>
       </div>
     </div>
     </div>
@@ -276,11 +237,11 @@
           <source src="objective_new.mp4"
                   type="video/mp4">
         </video>
-        <font size="4">  
-          <p class="has-text-centered">
+        <div style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 1rem;">
+          <p class="has-text-centered" style="font-size: 1.1rem; margin: 0;">
             Robust grasping of unseen objects with random poses on the table.
           </p>
-        </font>
+        </div>
       </div>
     </div>
     </div>
@@ -290,7 +251,7 @@
 <section class="section">
   <div class="container is-max-desktop">
   <h3 class="title is-3 has-text-centered">Robustness</h3>
-  <h2 class="subtitle has-text-centered">
+  <h2 class="subtitle has-text-centered" style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 2rem;">
     Trained by RL, our method shows great robustness and adaptability to internal and external disturbances.
   </h2>
     <div class="columns is-centered">
@@ -303,7 +264,7 @@
             </video>
           </div>
         </div>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-centered" style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 1rem auto; max-width: 80%;">
           Adaptive motions to observation noises and actual inaccuracies.
         </h2>
       
@@ -315,7 +276,7 @@
             </video>
           </div>
         </div>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-centered" style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 1rem auto; max-width: 80%;">
           Real-time adaptation to object movements and environmental changes.
         </h2>
 
@@ -327,7 +288,7 @@
             </video>
           </div>
         </div>
-        <h2 class="subtitle has-text-centered">
+        <h2 class="subtitle has-text-centered" style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 1rem auto; max-width: 80%;">
           Maintaining stable grasps despite external disturbances and unexpected forces.
         </h2>
       </div>
@@ -338,6 +299,9 @@
 <section class="section">
   <div class="container is-max-desktop">
   <h3 class="title is-3 has-text-centered">Application</h3>
+  <h2 class="subtitle has-text-centered" style="background-color: #f5f5f5; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+    Our method can be applied to real-world scenarios with complex environments and challenging tasks.
+  </h2>
     
     <div class="columns is-centered">
     <div class="column is-full-width has-text-centered">
@@ -346,11 +310,11 @@
           <source src="objective_new.mp4"
                   type="video/mp4">
         </video>
-        <font size="4">  
-          <p class="has-text-centered">
+        <div style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 1rem;">
+          <p class="has-text-centered" style="font-size: 1.1rem; margin: 0;">
             Grasping target objects under the disturbances caused by other objects in a cluttered environment.
           </p>
-        </font>
+        </div>
       </div>
     </div>
     </div>
