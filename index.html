@@ -164,7 +164,7 @@
           </video>
         </div>
         <h2 class="subtitle has-text-centered">
-            Our method achieves robust grasping of 500+ unseen objects with various shapes, sizes, materials, masses, and random poses, relying on single-view visual perception. 
+            Our method achieves robust grasping of 500+ unseen objects with various shapes, sizes, materials, masses, and random poses, relying on single-view perception. 
         </h2>
       </div>
     </div>
@@ -262,7 +262,7 @@
         </video>
         <font size="4">  
           <p class="has-text-centered">
-            Robust grasping of diverse unseen objects with varying shapes, sizes, and materials.
+            Robust grasping of diverse unseen objects with varying shapes, weights, and materials.
           </p>
         </font>
       </div>
@@ -278,7 +278,7 @@
         </video>
         <font size="4">  
           <p class="has-text-centered">
-            Adaptive grasping strategies tailored to different object properties and task requirements.
+            Robust grasping of unseen objects with random poses on the table.
           </p>
         </font>
       </div>
@@ -290,6 +290,9 @@
 <section class="section">
   <div class="container is-max-desktop">
   <h3 class="title is-3 has-text-centered">Robustness</h3>
+  <h2 class="subtitle has-text-centered">
+    Trained by RL, our method shows great robustness and adaptability to both internal and external disturbances.
+  </h2>
     <div class="columns is-centered">
       <div class="column is-full-width">
         <div class="has-text-centered">
@@ -301,7 +304,7 @@
           </div>
         </div>
         <h2 class="subtitle has-text-centered">
-          Maintaining stable grasps despite external disturbances and unexpected forces.
+          Adaptive motions to observation noises and actual inaccuracies.
         </h2>
       
         <div class="has-text-centered">
@@ -313,7 +316,7 @@
           </div>
         </div>
         <h2 class="subtitle has-text-centered">
-          Real-time adaptation to dynamic object movements and environmental changes.
+          Real-time adaptation to object movements and environmental changes.
         </h2>
 
         <div class="has-text-centered">
@@ -325,9 +328,31 @@
           </div>
         </div>
         <h2 class="subtitle has-text-centered">
-          Transferable grasping policies across different robotic hand morphologies.
+          Maintaining stable grasps despite external disturbances and unexpected forces.
         </h2>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <h3 class="title is-3 has-text-centered">Application</h3>
+    
+    <div class="columns is-centered">
+    <div class="column is-full-width has-text-centered">
+      <div class="content">
+        <video id="objective_video" autoplay controls muted loop playsinline height="100%" style="max-width: 80%; margin: 0 auto;">
+          <source src="objective_new.mp4"
+                  type="video/mp4">
+        </video>
+        <font size="4">  
+          <p class="has-text-centered">
+            Grasping target objects under the disturbances caused by other objects in a cluttered environment.
+          </p>
+        </font>
+      </div>
+    </div>
     </div>
   </div>
 </section>
