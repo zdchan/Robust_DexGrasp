@@ -280,15 +280,15 @@
 <section class="section_video">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <div class="publication-video">
-          <video id="teaser" autoplay controls muted loop playsinline height="100%">
+          <video id="teaser" autoplay controls muted loop playsinline height="100%" style="max-width: 100%; margin: 0 auto;">
             <source src="teaser.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <h2 class="subtitle has-text-centered">
-            Relying on single-view perception, our method achieves robust grasping (94.6% success rate) of 500+ unseen objects with various shapes, sizes, materials, masses, and random poses. The video shows continuous grasping of diverse objects without failure.
+        <h2 class="subtitle has-text-centered" style="max-width: 90%; margin-left: auto; margin-right: auto;">
+            Relying on single-view perception, our method achieves robust grasping (<strong>94.6% success rate</strong>) of 500+ unseen objects with various shapes, sizes, materials, masses, and random poses. The video shows continuous grasping of diverse objects without failure.
         </h2>
       </div>
     </div>
@@ -487,7 +487,7 @@
           </div>
         </div>
         <h2 class="subtitle has-text-centered">
-          The baselines suffer from <strong>round objects</strong> as misaligned finger torques lead to non-force closure grasps.
+          The baselines suffer from <strong>round objects</strong> as misaligned torques lead to non-force closure grasps.
         </h2>
     </div>
   </div>
