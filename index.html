@@ -311,7 +311,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified" style="background-color: #f5f5f5; padding: 2rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 100%; margin-left: auto; margin-right: auto;">
           <p>
-            Robust grasping of various objects from single-view perception is fundamental for dexterous robots. Previous works often rely on fully observable objects, expert demonstrations, or static grasping poses, which restrict their generalization ability and adaptability to external disturbances. In this paper, we present a reinforcement-learning-based framework that enables zero-shot dynamic dexterous grasping of a wide range of unseen objects from single-view perception, while performing adaptive motions to external disturbances. We utilize a hand-centric object representation for shape feature extraction that emphasizes interaction-relevant local shapes, enhancing robustness to shape variance and uncertainty. To enable effective hand adaptation to disturbances with limited observations, we propose a mixed curriculum learning strategy, which first utilizes imitation learning to distill a policy trained with privileged real-time visual-tactile feedback, and gradually transfers to reinforcement learning to learn adaptive motions under disturbances caused by observation noises and dynamic randomization. Our experiments demonstrate strong generalization in grasping unseen objects with random poses, achieving success rates of 97.0% across 247,786 simulated objects and 94.6% across 512 real objects. We also demonstrate the robustness of our method to various disturbances, including unobserved object movement and external forces, through both quantitative and qualitative evaluations.
+            The ability to robustly grasp a variety of objects is essential for dexterous robots. In this paper, we present a framework for zero-shot dynamic dexterous grasping using single-view visual inputs, designed to be resilient to various disturbances. Our approach utilizes a hand-centric object shape representation based on dynamic distance vectors between finger joints and object surfaces. This representation captures the local shape around potential contact regions rather than focusing on detailed global object geometry, thereby enhancing generalization to shape variations and uncertainties. To address perception limitations, we integrate a privileged teacher policy with a mixed curriculum learning approach, allowing the student policy to effectively distill grasping capabilities and explore for adaptation to disturbances. Trained in simulation, our method achieves success rates of 97.0% across 247,786 simulated objects and 94.6% across 512 real objects, demonstrating remarkable generalization. Quantitative and qualitative results validate the robustness of our policy against various disturbances.
           </p>
         </div>
       </div>
@@ -424,7 +424,7 @@
           Adaptive motions to <strong>observation noises</strong> and <strong>actuator inaccuracies</strong>.
         </h2>
       
-        <div class="has-text-centered">
+        <!-- <div class="has-text-centered">
           <div class="content">
             <video id="multimat-video2" autoplay controls muted loop playsinline height="100%" style="max-width: 80%; margin: 0 auto;">
               <source src="movement.mp4"
@@ -434,7 +434,7 @@
         </div>
         <h2 class="subtitle has-text-centered">
           Real-time adaptation to environmental changes such as <strong>object movements</strong>.
-        </h2>
+        </h2> -->
 
         <div class="has-text-centered">
           <div class="content">
