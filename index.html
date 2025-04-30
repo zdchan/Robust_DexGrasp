@@ -146,6 +146,18 @@
       font-weight: 700;
       letter-spacing: -0.5px;
     }
+    
+    /* 添加主标题和副标题样式 */
+    .publication-title .main-title {
+      font-size: 1.2em;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    
+    .publication-title .subtitle-text {
+      font-size: 0.85em;
+      display: block;
+    }
 
     /* 优化作者部分 */
     .publication-authors a {
@@ -198,7 +210,10 @@
     <div class="container is-widescreen">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">RobustDexGrasp: Robust Dexterous Grasping of General Objects</h1>
+          <h1 class="title is-1 publication-title">
+            <span class="main-title">RobustDexGrasp</span><br>
+            <span class="subtitle-text">Robust Dexterous Grasping of General Objects</span>
+          </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://zdchan.github.io/">Hui Zhang</a><sup>1*</sup>,</span>
