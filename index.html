@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="RobustDexGrasp: Robust Dexterous Grasping of General Objects from Single-view Perception.">
+        content="RobustDexGrasp: Robust Dexterous Grasping of General Objects.">
   <meta name="keywords" content="RobustDexGrasp">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RobustDexGrasp: Robust Dexterous Grasping of General Objects from Single-view Perception</title>
+  <title>RobustDexGrasp: Robust Dexterous Grasping of General Objects</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -119,13 +119,13 @@
 
     /* 添加渐入动画类 */
     .fade-in-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      opacity: 1; /* 将透明度设为1，确保内容直接可见 */
+      transform: none; /* 移除变换效果 */
+      transition: none; /* 移除过渡效果 */
     }
     .fade-in-section.is-visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
 
     /* 调整section标题居中显示 */
@@ -182,31 +182,12 @@
     document.addEventListener('DOMContentLoaded', function() {
       const sections = document.querySelectorAll('.section:not(#BibTeX)');
       
-      // 添加fade-in类到所有section，除了BibTeX部分
+      // 移除渐入动画效果，确保所有内容直接可见
       sections.forEach(section => {
         if(!section.classList.contains('hero')) {
-          section.classList.add('fade-in-section');
+          section.classList.add('is-visible');
         }
       });
-      
-      // 检测滚动位置并添加可见类
-      function checkSections() {
-        const triggerBottom = window.innerHeight * 0.8;
-        
-        sections.forEach(section => {
-          const sectionTop = section.getBoundingClientRect().top;
-          
-          if(sectionTop < triggerBottom) {
-            section.classList.add('is-visible');
-          }
-        });
-      }
-      
-      // 初始检查
-      checkSections();
-      
-      // 滚动时检查
-      window.addEventListener('scroll', checkSections);
     });
   </script>
 </head>
