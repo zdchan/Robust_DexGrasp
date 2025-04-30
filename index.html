@@ -111,10 +111,37 @@
     .publication-links .button {
       transition: all 0.3s ease;
       border: none;
+      background: linear-gradient(135deg, #2c3e50, #4d7085);
+      color: white;
+      font-weight: 600;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 0 0.5rem;
+      animation: buttonsFadeIn 1.2s ease-out;
+      animation-delay: 0.9s;
+      animation-fill-mode: both;
     }
+    
+    @keyframes buttonsFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     .publication-links .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #3a7bd5, #4d7085);
+    }
+    
+    .publication-links .button .icon {
+      margin-right: 0.5rem;
     }
 
     /* 添加渐入动画类 */
@@ -138,33 +165,115 @@
 
     /* 优化主标题 */
     .publication-title {
-      background: linear-gradient(90deg, #2c3e50, #4a6572, #2c3e50);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      text-shadow: 0px 2px 3px rgba(0,0,0,0.1);
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      padding: 1rem 0;
+      margin-bottom: 1.5rem;
     }
     
     /* 添加主标题和副标题样式 */
     .publication-title .main-title {
-      font-size: 1.2em;
+      font-size: 4.2rem;
       display: block;
-      margin-bottom: 0.2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #2c3e50, #4d7085, #3a7bd5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      position: relative;
+      padding-bottom: 0.5rem;
+      animation: titleFadeIn 1.2s ease-out;
+    }
+    
+    @keyframes titleFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .publication-title .main-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      right: 20%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(58, 123, 213, 0.6), transparent);
+      border-radius: 3px;
+      animation: lineExpand 1.5s ease-out forwards;
+    }
+    
+    @keyframes lineExpand {
+      0% {
+        left: 40%;
+        right: 40%;
+        opacity: 0;
+      }
+      100% {
+        left: 20%;
+        right: 20%;
+        opacity: 1;
+      }
     }
     
     .publication-title .subtitle-text {
-      font-size: 0.85em;
+      font-size: 2.2rem;
       display: block;
+      font-weight: 600;
+      color: #546e7a;
+      letter-spacing: -0.3px;
+      margin-top: 1rem;
+      margin-bottom: 1.8rem;
+      animation: subtitleFadeIn 1.2s ease-out;
+      animation-delay: 0.3s;
+      animation-fill-mode: both;
+    }
+    
+    @keyframes subtitleFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* 优化作者部分 */
+    .publication-authors {
+      transition: color 0.3s ease;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      animation: authorsFadeIn 1.2s ease-out;
+      animation-delay: 0.6s;
+      animation-fill-mode: both;
+    }
+    
+    @keyframes authorsFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     .publication-authors a {
       transition: color 0.3s ease;
+      color: #3a7bd5;
+      font-weight: 500;
     }
     .publication-authors a:hover {
-      color: #3273dc;
+      color: #2c3e50;
       text-decoration: underline;
     }
 
