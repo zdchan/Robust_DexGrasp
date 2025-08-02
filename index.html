@@ -290,6 +290,36 @@
       background-color: #f8f8f8;
     }
 
+    /* 美化接收通知样式 */
+    .acceptance-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 12px;
+      margin-bottom: 8px;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      animation: acceptanceFadeIn 1s ease-out;
+      animation-delay: 0.8s;
+      animation-fill-mode: both;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    @keyframes acceptanceFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
     /* 确保BibTeX部分不会有动画效果 */
     #BibTeX {
       opacity: 1 !important;
@@ -353,8 +383,8 @@
               *Equal Contribution
           </div>
           
-          <div class="is-size-5">
-              <span class="author-block">  <b>Accepted by CORL 2025</b></span>
+          <div class="has-text-centered">
+              <span class="acceptance-badge">Accepted by CORL 2025</span>
           </div>
 
           <div class="column has-text-centered">
