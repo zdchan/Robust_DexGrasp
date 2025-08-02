@@ -290,33 +290,43 @@
       background-color: #f8f8f8;
     }
 
-    /* 美化接收通知样式 */
-    .acceptance-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
+    /* 接收通知样式 */
+    .acceptance-text {
       font-weight: 600;
-      font-size: 0.95rem;
+      color: #3a7bd5;
       margin-top: 12px;
       margin-bottom: 8px;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
       animation: acceptanceFadeIn 1s ease-out;
       animation-delay: 0.8s;
       animation-fill-mode: both;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    }
+    
+    /* Equal Contribution 样式 */
+    .equal-contribution {
+      animation: equalContribFadeIn 1.2s ease-out;
+      animation-delay: 0.7s;
+      animation-fill-mode: both;
     }
     
     @keyframes acceptanceFadeIn {
       0% {
         opacity: 0;
-        transform: translateY(10px) scale(0.9);
+        transform: translateY(5px);
       }
       100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes equalContribFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -379,12 +389,12 @@
             <span class="author-block"><sup>3</sup>HKUST, Hong Kong (China)</span>
           </div>
 
-          <div class="is-size-5">
+          <div class="is-size-5 equal-contribution">
               *Equal Contribution
           </div>
           
           <div class="has-text-centered">
-              <span class="acceptance-badge">Accepted by CORL 2025</span>
+              <span class="acceptance-text"><b>Accepted by CORL 2025</b></span>
           </div>
 
           <div class="column has-text-centered">
